@@ -19,5 +19,8 @@
   "homepage": "https://github.com/RogerIO-git/Cypress-Automation-Project#readme",
   "devDependencies": {
     "cypress": "^12.1.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0"
   }
 }
