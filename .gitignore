@@ -1,3 +1,14 @@
+# test
+reports
+mochawesome-report
+videos
+screenshots
+.DS_Store
+.env
+cypress/downloads
+cypress/videos/
+
+
 # Logs
 logs
 *.log
