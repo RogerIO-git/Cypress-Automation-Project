@@ -14,7 +14,10 @@ module.exports = {
         shipment: 'FREE PONY EXPRESS DELIVERY!'
     },
     invalid: {
-        email:'invalid@testmail.com',
-        password: 'Password123',
+        email:'i',
+        password: 'P',
+        loginErrorMsgAlert: 'Wrong email or password.',
+        signupErrorMsgAlert:"We're sorry, something went wrong when attempting to sign up.",
+        errorWarningHint: 'Email is invalid',
     },
 }
