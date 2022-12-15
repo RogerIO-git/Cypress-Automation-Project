@@ -2,6 +2,7 @@ import Auth from '../page/auth.page'
 import Product from '../page/product.page'
 import user from '../data/users.data'
 import products from '../data/products.data'
+
 describe('Authentication', () => {
   beforeEach(() => {
       cy.visit('/')
