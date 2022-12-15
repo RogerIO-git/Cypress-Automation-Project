@@ -3,7 +3,8 @@ module.exports = {
         {
             name: 'Quality Fitted Hat',
             description: '3 Pack Unisex Vintage Washed Distressed Baseball-Cap,Retro Adjustable Dad Hats,Baseball Hat for Men Women',
-            price: '30'
+            price: '30',
+            tag: 'hat'
         },
         {
             name: 'Quality Trucker Hat',
