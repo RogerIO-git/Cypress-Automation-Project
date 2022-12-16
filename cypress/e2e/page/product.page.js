@@ -10,17 +10,22 @@ class Products {
     get backToProductsBtn() { return ('.chakra-heading.css-18j379d') }
     get increaseProductAmountBtn() { return ('#product-increase') }
     get decreaseProductAmountBtn() { return ('#product-decrease') }
-    
 
+    get navbarCart() { return ('#top-cart') }
+    
     getProductId(num) { 
         let productId = `#product-${num}`
         return productId
+    }  
+
+    addItemToCart(itemNum){
+        cy.get(this.getProductId(itemNum))
+        .find(this.productImgs)
+        .should('be.visible')
+        .click()
+
+        cy.get(this.backToProductsBtn).should('be.visible')
+        cy.get(this.addToCartBtns).scrollIntoView().trigger('click')
     }
-
-
-
-
-
-    
 }
 export default new Products()
