@@ -4,6 +4,7 @@ import users from '../data/users.auth.data'
 import products from '../data/products.data'
 
 describe('Product Gallery', () => {
+
   beforeEach(() => {
       cy.visit('/')
       cy.get(Auth.signInOrRegisterBtn).click();
