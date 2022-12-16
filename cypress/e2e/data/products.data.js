@@ -2,13 +2,13 @@ module.exports = {
     products: [
         {
             name: ' Quality Fitted Hat ',
-            description: '3 Pack Unisex Vintage Washed Distressed Baseball-Cap,Retro Adjustable Dad Hats,Baseball Hat for Men Women',
+            description: ' 3 Pack Unisex Vintage Washed Distressed Baseball-Cap,Retro Adjustable Dad Hats,Baseball Hat for Men Women ',
             price: 30,
             tag: 'hat'
         },
         {
             name: ' Quality Trucker Hat ',
-            description: 'Croogo Quick Dry Sports Hat UPF 50+ Baseball Cap Embroidered Lightweight Outdoor UV Protection Sun Hats for Men Women',
+            description: ' Croogo Quick Dry Sports Hat UPF 50+ Baseball Cap Embroidered Lightweight Outdoor UV Protection Sun Hats for Men Women ',
             price: 24
         },
         {
