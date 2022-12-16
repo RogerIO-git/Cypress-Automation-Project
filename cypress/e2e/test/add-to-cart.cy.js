@@ -2,7 +2,7 @@ import Auth from '../page/auth.page'
 import Product from '../page/product.page'
 import Cart from '../page/cart.page'
 import products from '../data/products.data'
-import user from '../data/users.data'
+import users from '../data/users.auth.data'
 describe('Add-to-cart', () => {
     beforeEach(() => {
         cy.visit('/')
@@ -10,10 +10,10 @@ describe('Add-to-cart', () => {
         //Login on to site.
         cy.origin(
           "https://dev-mlluudmotpwoldtv.us.auth0.com",
-          { args: user },
-          (user) => {
-            cy.get('#1-email').type(user.valid.email)
-            cy.get('#1-password').type(user.valid.password)
+          { args: users },
+          (users) => {
+            cy.get('#1-email').type(users[0].email)
+            cy.get('#1-password').type(users[0].password)
             cy.get('#1-submit').click()
           }
         );
