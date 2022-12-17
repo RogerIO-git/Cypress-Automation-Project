@@ -14,5 +14,13 @@ module.exports = defineConfig({
     
     chromeWebSecurity: false,
 
+    reporter: 'mochawesome',
+    reporterOptions: {
+      reportDir: 'cypress/reports',
+      overwrite: false,
+      html: false,
+      json: true
+    },
+
   },
 });

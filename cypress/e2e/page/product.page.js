@@ -19,6 +19,7 @@ class Products {
     get productDetailsName() { return ('.css-84zodg>h2.css-1dklj6k') }
     get productDetailsInfo() { return ('p.css-0') }
 
+    //Navbar
     get navbarCart() { return ('#top-cart') }
     get navbarContact() { return ('#top-contact') }
     
@@ -32,9 +33,9 @@ class Products {
         .find(this.productImgs)
         .should('be.visible')
         .click()
-
-        cy.get(this.backToProductsBtn, {timeout: 3000}).should('be.visible')
-        cy.get(this.addToCartBtns).scrollIntoView().trigger('click')
+  
+        cy.get(this.backToProductsBtn).scrollIntoView().should('be.visible')
+        cy.get(this.addToCartBtns).trigger('click')
     }
 
     selectFilter(filter){

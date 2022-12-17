@@ -7,17 +7,7 @@ import products from '../data/products.data'
 describe('Product Gallery', () => {
 
   beforeEach(() => {
-      cy.visit('/')
-      cy.get(Auth.signInOrRegisterBtn).click();
-      cy.origin(
-        "https://dev-mlluudmotpwoldtv.us.auth0.com",
-        { args: users },
-        (users) => {
-          cy.get('#1-email').type(users[0].email)
-          cy.get('#1-password').type(users[0].password)
-          cy.get('#1-submit').click()
-        }
-      );
+    Auth.login(users)
   })
 
   for(let i = 0; i < Product.productTile.length-1; i++) {   
