@@ -28,7 +28,7 @@ class Products {
         .should('be.visible')
         .click()
 
-        cy.get(this.backToProductsBtn).should('be.visible')
+        cy.get(this.backToProductsBtn, {timeout: 3000}).should('be.visible')
         cy.get(this.addToCartBtns).scrollIntoView().trigger('click')
     }
 }
