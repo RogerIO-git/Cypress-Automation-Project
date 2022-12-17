@@ -91,7 +91,7 @@ describe('Product Details', () => {
     .click()
 
     cy.get(Product.productDetailsInfo)
-    .eq(0)
+    .eq(1)
     .should('be.visible')
     .should('contain', products.products[0].description.trim())
   })
@@ -104,7 +104,7 @@ describe('Product Details', () => {
     .click()
 
     cy.get(Product.productDetailsInfo)
-    .eq(2)
+    .eq(3)
     .should('be.visible')
     .should('contain', products.products[0].price)
   })
