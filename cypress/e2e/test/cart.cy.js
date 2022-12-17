@@ -35,10 +35,10 @@ describe('Cart', () => {
       cy.get(Cart.itemInCartDescription).eq(1).should('have.text', products.products[0].description)
     })
 
-    it('Verify that a user can see the all items added in the cart', () => {
+    it('Verify that a user is able to decrease the amount of items from the cart', () => {
       Product.addItemToCart(0)
       
-      Cart.deleteFirstItemInCart()
+      Cart.decrementFirstItemInCart()
       cy.get(Cart.emptyCartTitle).contains(' Your cart is empty. ')
     })
 

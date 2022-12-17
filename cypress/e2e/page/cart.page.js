@@ -16,7 +16,7 @@ class Cart {
 
     get decreaseInCartBtn() { return ('button[aria-label="Decrement quantity"]') }
     
-    deleteFirstItemInCart() { 
+    decrementFirstItemInCart() { 
         cy.get(this.decreaseInCartBtn)
         .eq(0)
         .should('be.visible')
