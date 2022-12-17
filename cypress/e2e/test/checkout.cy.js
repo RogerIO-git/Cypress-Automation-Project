@@ -7,18 +7,7 @@ import users from '../data/users.auth.data'
 import paymentInfo from '../data/users.checkout.data'
 describe('Checkout', () => {
     beforeEach(() => {
-        cy.visit('/')
-        cy.get(Auth.signInOrRegisterBtn).click();
-        //Login on to site.
-        cy.origin(
-          "https://dev-mlluudmotpwoldtv.us.auth0.com",
-          { args: users },
-          (users) => {
-            cy.get('#1-email').type(users[0].email)
-            cy.get('#1-password').type(users[0].password)
-            cy.get('#1-submit').click()
-          }
-        )
+        Auth.login(users)
         Product.addItemToCart(0)
 
         cy.get(Cart.cartCheckoutBtn).should('be.visible').click({force: true})

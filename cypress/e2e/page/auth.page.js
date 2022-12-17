@@ -14,10 +14,19 @@ class Authentication {
 
 
 
-    login(email, password) {
-        cy.get(this.emailField).type(email)
-        cy.get(this.passwordField).type(password)
-        cy.get(this.authSubmitBtn).click()
+    login(users) {
+        cy.visit('/')
+        cy.get(this.signInOrRegisterBtn).click();
+        //Login on to site.
+        cy.origin(
+          "https://dev-mlluudmotpwoldtv.us.auth0.com",
+          { args: users },
+          (users) => {
+            cy.get('#1-email').type(users[0].email)
+            cy.get('#1-password').type(users[0].password)
+            cy.get('#1-submit').click()
+          }
+        );
     }
 
     logout() {

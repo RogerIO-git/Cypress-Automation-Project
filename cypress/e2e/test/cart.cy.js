@@ -5,18 +5,7 @@ import products from '../data/products.data'
 import users from '../data/users.auth.data'
 describe('Cart', () => {
     beforeEach(() => {
-        cy.visit('/')
-        cy.get(Auth.signInOrRegisterBtn).click();
-        //Login on to site.
-        cy.origin(
-          "https://dev-mlluudmotpwoldtv.us.auth0.com",
-          { args: users },
-          (users) => {
-            cy.get('#1-email').type(users[0].email)
-            cy.get('#1-password').type(users[0].password)
-            cy.get('#1-submit').click()
-          }
-        );
+      Auth.login(users)
     })
 
     it('Verify that a user is able to see the amount of items in the cart', () => {
