@@ -20,6 +20,7 @@ class Products {
     get productDetailsInfo() { return ('p.css-0') }
 
     get navbarCart() { return ('#top-cart') }
+    get navbarContact() { return ('#top-contact') }
     
     getProductId(num) { 
         let productId = `#product-${num}`
