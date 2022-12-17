@@ -59,8 +59,4 @@ describe('Cart', () => {
       cy.get(Cart.cartCheckoutBtn).click()
       cy.url().should('contain', '/checkout')
     })
-
-
-  
 })
-
