@@ -2,7 +2,6 @@ import Auth from '../page/auth.page'
 import Product from '../page/product.page'
 import Cart from '../page/cart.page'
 import Checkout from '../page/checkout.page'
-import products from '../data/products.data'
 import users from '../data/users.auth.data'
 import paymentInfo from '../data/users.checkout.data'
 describe('Checkout', () => {

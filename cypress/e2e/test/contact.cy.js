@@ -1,9 +1,7 @@
 import Auth from '../page/auth.page'
 import Product from '../page/product.page'
-import Cart from '../page/cart.page'
 import Contact from '../page/contact.page'
 import users from '../data/users.auth.data'
-import products from '../data/products.data'
 import contacts from '../data/users.contact.data'
 
 describe('Contact', () => {

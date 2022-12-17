@@ -9,13 +9,7 @@ describe('Add-to-cart', () => {
     })
 
     it('Verify that a user can add a single item to the cart', () => {
-      cy.get(Product.getProductId(0))
-      .find(Product.productImgs)
-      .should('be.visible')
-      .click()
-
-      cy.get(Product.backToProductsBtn).should('be.visible')
-      cy.get(Product.addToCartBtns).click()
+      Product.addItemToCart(0)
       cy.get(Cart.cartCheckoutBtn).should('be.visible')
 
       cy.get(Cart.itemInCartName).eq(0).should('have.text', products.products[0].name)
@@ -23,25 +17,13 @@ describe('Add-to-cart', () => {
     })
 
     it('Verify that a user can add multiple items to cart', () => {
-      cy.get(Product.getProductId(0))
-      .find(Product.productImgs)
-      .should('be.visible')
-      .click()
-
-      cy.get(Product.backToProductsBtn).should('be.visible')
-      cy.get(Product.addToCartBtns).click()
+      Product.addItemToCart(0)
       cy.get(Cart.cartCheckoutBtn).should('be.visible')
 
       cy.get(Cart.cartBackBtn).click()
       cy.get(Product.backToProductsBtn).click()
 
-      cy.get(Product.getProductId(1))
-      .find(Product.productImgs)
-      .should('be.visible')
-      .click()
-
-      cy.get(Product.backToProductsBtn).should('be.visible')
-      cy.get(Product.addToCartBtns).click()
+      Product.addItemToCart(1)
 
       cy.get(Cart.itemInCartName).eq(0).should('have.text', products.products[1].name)
       cy.get(Cart.itemInCartName).eq(1).should('have.text', products.products[0].name)
@@ -64,13 +46,7 @@ describe('Add-to-cart', () => {
     })
     
     it('Verify that the total in the cart updates with each item added', () => {
-      cy.get(Product.getProductId(0))
-      .find(Product.productImgs)
-      .should('be.visible')
-      .click()
-
-      cy.get(Product.backToProductsBtn).should('be.visible')
-      cy.get(Product.addToCartBtns).click()
+      Product.addItemToCart(0)
       cy.get(Cart.cartCheckoutBtn).should('be.visible')
 
       cy.get(Cart.cartBackBtn).click()

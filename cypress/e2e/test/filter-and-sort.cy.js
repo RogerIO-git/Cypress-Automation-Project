@@ -11,7 +11,9 @@ describe('Filter and Sort', () => {
     })
 
     it('Verify that a user is able to sort items on the product page from A to Z', () => { 
+        
         Product.selectFilter(products.filter['A to Z'])
+        //wait added to give the grid time to update
         cy.wait(500)
         products.products.sort((a, b)=>{
             if(a.name.trim()>b.name.trim()){
@@ -28,8 +30,9 @@ describe('Filter and Sort', () => {
 
     it('Verify that a user is able to sort items on the product page from Z to A', () => {
         Product.selectFilter(products.filter['Z to A'])
+        //wait added to give the grid time to update
         cy.wait(500)
-        // products.products.sort().reverse()
+        //sorts the product list by name 
         products.products.sort((a, b)=>{
             if(a.name.trim()>b.name.trim()){
                 return 1
@@ -45,6 +48,7 @@ describe('Filter and Sort', () => {
 
     it('Verify that a user is able to sort items on the product page from low to high', () => {
         Product.selectFilter(products.filter['Low to High'])
+        //wait added to give the grid time to update
         cy.wait(500)
         products.products.sort((a, b) => a.price - b.price)
 
@@ -56,6 +60,7 @@ describe('Filter and Sort', () => {
 
     it('Verify that a user is able to sort items on the product page from High to Low', () => {
         Product.selectFilter(products.filter['High to Low'])
+        //wait added to give the grid time to update
         cy.wait(500)
         products.products.sort((a, b) => b.price - a.price)
 

@@ -1,9 +1,9 @@
 class Checkout {
 
+    //Checkout form elements
     get checkoutNameField() { return ('input[name="name"]') }
     get checkoutEmailField() { return ('input[name="email"]') }
     get checkoutAddressField() { return ('.snipcart-form__address-autocomplete>.snipcart-form__select') }
-    // get checkoutAddressField2() { return ('.snipcart-typeahead__select') }
     get checkoutAddressField2() { return ('.snipcart-form__select-wrapper>.snipcart-form__select') }
     get checkoutCityField() { return ('input[name="city"]') }
     get checkoutDropdownField() { return ('.snipcart-form__select') }
@@ -12,11 +12,13 @@ class Checkout {
     get checkoutContinueToPaymentBtn() { return ('button[type="submit"]') }
     get checkoutInfoErrorHint() { return ('.snipcart-field-error') }
 
+    //Payment frame elements
     get checkoutPaymentFrame() { return ('.snipcart-payment-card-form>iframe') }
     get checkoutCardNumber() { return ('#card-number') }
     get checkoutCardExpiryDate() { return ('#expiry-date') }
     get checkoutCardCvv() { return ('#cvv') }
 
+    //Order elements
     get checkoutSummaryTitles() { return ('h1.snipcart__font--subtitle') }
     get checkoutSummaryItemName() { return ('.snipcart-cart-summary-expanded-item__name') }
 
@@ -44,8 +46,6 @@ class Checkout {
         cy.get(this.checkoutNameField).type(full_name)
         cy.get(this.checkoutEmailField).type(email)
         this.cityDropdown().type(streetAddress)
-        // cy.get(this.checkoutAddressField).click()
-        // cy.get(this.checkoutAddressField2).type(streetAddress)
         cy.get(this.checkoutCityField).type(city)
         if(country !== ' ' ){
             this.countryDropdown().select(country)

@@ -1,6 +1,5 @@
 import Auth from '../page/auth.page'
 import Product from '../page/product.page'
-import Cart from '../page/cart.page'
 import users from '../data/users.auth.data'
 import products from '../data/products.data'
 

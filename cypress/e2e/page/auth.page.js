@@ -1,5 +1,5 @@
 class Authentication {
-
+    //ogin and signup form elements
     get signInOrRegisterBtn() { return ('#signInOrRegister') }
     get emailField() { return ('#1-email') }
     get passwordField() { return ('#1-password') }
