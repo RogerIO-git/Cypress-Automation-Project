@@ -7,6 +7,9 @@ class Products {
     get productPriceTags() { return ('.chakra-text.css-0') }
     get productTile() { return ('.chakra-stack.css-uaqjf') }
     get productName() { return ('.chakra-text.css-1n64n71') }
+    get productSort() { return ('#sort') }
+    get productFilter() { return ('#category') }
+    get productResetFilter() { return ('#reset') }
 
     //Product detail page element gettters
     get backToProductsBtn() { return ('.chakra-heading.css-18j379d') }
@@ -30,6 +33,15 @@ class Products {
 
         cy.get(this.backToProductsBtn, {timeout: 3000}).should('be.visible')
         cy.get(this.addToCartBtns).scrollIntoView().trigger('click')
+    }
+
+    selectFilter(filter){
+        cy.get(this.productSort).select(filter)
+
+    }
+
+    selectCategory(category){
+        cy.get(this.productFilter).select(category)
     }
 }
 export default new Products()
