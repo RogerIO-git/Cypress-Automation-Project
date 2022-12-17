@@ -10,6 +10,7 @@ class Products {
     get productSort() { return ('#sort') }
     get productFilter() { return ('#category') }
     get productResetFilter() { return ('#reset') }
+    get productSearch() { return ('#search')}
 
     //Product detail page element gettters
     get backToProductsBtn() { return ('.chakra-heading.css-18j379d') }
@@ -42,6 +43,10 @@ class Products {
 
     selectCategory(category){
         cy.get(this.productFilter).select(category)
+    }
+
+    doSearch(item){
+        cy.get(this.productSearch).type(item)
     }
 }
 export default new Products()
