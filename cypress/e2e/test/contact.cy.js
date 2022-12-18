@@ -17,7 +17,7 @@ describe('Contact', () => {
   
     for(let contact of contacts){
         if(contact.valid) {
-            it('Verify that the user can use the navbar to navigate to the contacts page', () => { 
+            it('Verify that the user is able to send contact information', () => { 
                 cy.get(Product.navbarContact).click()
                 Contact.fillContactForm(
                     contact.first_name,
